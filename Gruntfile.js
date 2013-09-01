@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 			expected: ['test/expected']
 		},
 		normalize: {
-			all: {
+			cmd: {
 				files: [{
 					expand: true,
 					cwd: 'test/cases/cmd',
@@ -46,5 +46,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-mocha-test');
 
 	grunt.registerTask('default', ['jshint']);
-	grunt.registerTask('test', ['clean', 'normalize', 'mochaTest', 'clean']);
+	grunt.registerTask('test', ['clean', 'normalize', 'mochaTest']);
 };

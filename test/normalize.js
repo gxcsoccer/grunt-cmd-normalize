@@ -9,7 +9,7 @@ describe('file', function() {
 
 	dirs.forEach(function(dir) {
 		var files = fs.readdirSync(path.join(base, dir)).filter(function(file) {
-			return /\.expect$/.test(file);
+			return (/\.expect$/).test(file);
 		});
 		if (files.length) {
 			it('should test ' + dir, function() {
